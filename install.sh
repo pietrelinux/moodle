@@ -8,3 +8,5 @@ service apache2 restart
 wget https://download.moodle.org/stable38/moodle-latest-38.tgz
 tar xf moodle-latest-38.tgz -C /var/www/html/
 chown www-data:www-data /var/www/html/moodle/
+mkdir /var/www/moodledata
+chown www-data:www-data /var/www/moodledata/
