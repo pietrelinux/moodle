@@ -1,6 +1,6 @@
 #!/bin/sh
 
-apt install -y zip unzip mysql-server apache2 libapache2-mod-php7.2 php7.2 php7.2-xml php7.2-gd php7.2-json php7.2-zip php7.2-intl php7.2-curl php7.2-intl php7.2-opcache php7.2-mysql
+apt install -y zip unzip mariadb-server apache2 libapache2-mod-php7.2 php7.2 php7.2-xml php7.2-gd php7.2-json php7.2-zip php7.2-intl php7.2-curl php7.2-intl php7.2-opcache php7.2-mysql
 a2enmod rewrite
 service apache2 restart
 a2enmod ssl
