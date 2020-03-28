@@ -5,7 +5,6 @@ a2enmod rewrite
 service apache2 restart
 a2enmod ssl
 service apache2 restart
-mysql_secure_installation
 wget https://download.moodle.org/download.php/stable38/moodle-latest-38.tgz
 tar xf moodle-latest-38.tgz -C /var/www/html/
 chown www-data:www-data /var/www/html/moodle/
