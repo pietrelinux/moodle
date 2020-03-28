@@ -1,0 +1,12 @@
+#!/bin/sh
+
+sudo apt-get install zip unzip mysql-server apache2 libapache2-mod-php7.0 php7.0 php7.0-xml php7.0-gd php7.0-json php7.0-zip php7.0-intl php7.0-mcrypt php7.0-curl php7.0-intl php7.0-opcache php7.0-mysql
+
+a2enmod rewrite
+service apache2 restart
+a2enmod ssl
+service apache2 restart
+mysql_secure_installation
+wget https://download.moodle.org/download.php/stable38/moodle-latest-38.tgz
+tar xf moodle-latest-38.tgz -C /var/www/html/
+chown www-data:www-data /var/www/html/moodle/
