@@ -11,3 +11,10 @@ chown www-data:www-data /var/www/html/moodle/
 mkdir /var/www/moodledata
 chown www-data:www-data /var/www/moodledata/
 service apache2 restart
+mysql -u root -p
+create database moodle_db collate utf8mb4_general_ci character set utf8mb4;
+create user moodle_user@localhost identified by 'qwerty';
+grant all privileges on moodle_db.* to moodle_user@localhost;
+flush privileges;
+exit;
+
