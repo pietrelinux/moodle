@@ -10,3 +10,4 @@ tar xf moodle-latest-38.tgz -C /var/www/html/
 chown www-data:www-data /var/www/html/moodle/
 mkdir /var/www/moodledata
 chown www-data:www-data /var/www/moodledata/
+service apache2 restart
